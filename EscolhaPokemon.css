@@ -1,0 +1,95 @@
+html{
+    background-color: rgba(102, 138, 82, 0.904);
+}
+
+h1{
+  position: absolute;
+  overflow: hidden;
+  top: 5%;   /* coloca no meio da altura */
+  left: 50%;  /* coloca no meio da largura */
+  transform: translate(-50%, -50%); /* ajusta para o centro exato */
+  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  height: auto;
+  }
+#Logo{
+  width: 200px;
+
+}
+.cenarioTodo{
+  position: absolute;
+  top: 50%;   /* coloca no meio da altura */
+  left: 50%;  /* coloca no meio da largura */
+  transform: translate(-50%, -50%); /* ajusta para o centro exato */
+  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  height: auto;
+}
+
+#cenario{
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.432);
+  border-radius: 20px;
+  
+}
+
+.animacao-sobe-desce {
+  animation: sobe-desce 700ms ease-in-out ;
+}
+
+@keyframes sobe-desce {
+  0% {
+    transform: translateY(1);   /* posição inicial */
+  }
+  25%{
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75%{
+    transform: translateY(-30px); /* sobe 50px */
+    
+  }
+  100% {
+    transform: translateY(1);   /* volta ao normal */
+  }
+}
+
+#resultado{
+  position: absolute;
+  top: 42%;   /* coloca no meio da altura */
+  left: 50%;  /* coloca no meio da largura */
+  transform: translate(-50%, -50%); /* ajusta para o centro exato */
+  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  height: auto;
+}
+
+#base{
+    position: absolute;
+    background-color: rgba(10, 9, 9, 0.185);
+    width: 90px;
+    height: 15px;
+    border-radius: 150px;
+    top: 52.5%;
+    left: 44%;
+}
+
+.botoes{
+  display: flex;
+  background-size: contain; /* ajusta a imagem */
+  justify-content: center;  /* centraliza os botões na horizontal */
+  gap: 150px;               /* espaço entre os botões */
+  margin-top: 25px;
+}
+
+.botoes img {
+  display: block;
+}
+
+#botao1,#botao2,#botao3{
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+#Meunome{
+  width: 120px;
+  height: 20px;
+}
