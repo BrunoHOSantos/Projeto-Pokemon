@@ -3,16 +3,17 @@ html{
 }
 
 h1{
+  font-family:normal 30pt ;
   position: absolute;
   overflow: hidden;
-  top: 5%;   /* coloca no meio da altura */
+  top: 8%;   /* coloca no meio da altura */
   left: 50%;  /* coloca no meio da largura */
   transform: translate(-50%, -50%); /* ajusta para o centro exato */
   max-width: 100%;  /* garante que a imagem não estoure a tela */
   height: auto;
   }
 #Logo{
-  width: 200px;
+  width: 300px;
 
 }
 .cenarioTodo{
@@ -92,4 +93,5 @@ h1{
 #Meunome{
   width: 120px;
   height: 20px;
+  transform: translate(10px, 95vh);
 }
