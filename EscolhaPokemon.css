@@ -5,10 +5,10 @@ html{
 h1{
   position: absolute;
   overflow: hidden;
-  top: 5%;   
-  left: 50%;  
-  transform: translate(-50%, -50%);
-  max-width: 100%;  
+  top: 8%;   /* coloca no meio da altura */
+  left: 50%;  /* coloca no meio da largura */
+  transform: translate(-50%, -50%); /* ajusta para o centro exato */
+  max-width: 100%;  /* garante que a imagem não estoure a tela */ 
   height: auto;
   }
 #Logo{
