@@ -1,8 +1,11 @@
+
 html{
-    background-color: rgba(102, 138, 82, 0.904);
+  background-color: rgba(102, 138, 82, 0.904);
 }
 
 h1{
+  font-size: 30pt;
+  font-family:Pixel;
   position: absolute;
   overflow: hidden;
   top: 8%;   /* coloca no meio da altura */
@@ -12,7 +15,7 @@ h1{
   height: auto;
   }
 #Logo{
-  width: 200px;
+  width: 300px;
 
 }
 .cenarioTodo{
@@ -92,4 +95,9 @@ h1{
 #Meunome{
   width: 120px;
   height: 20px;
+  transform: translate(10px, 95vh);
+}
+@font-face {
+    font-family: 'Pixel';
+    src: url('Fonts/Pixel.ttf');
 }
