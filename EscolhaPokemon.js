@@ -1,5 +1,6 @@
 let resultadoJS = document.getElementById('resultado')
 let imgJS = document.createElement('img')
+let NomeDoPokemonJS = window.document.getElementById("NomeDoPokemon")
 document.getElementById('base').style.visibility = 'hidden'
 imgJS.setAttribute('id','foto')
 const botao2JS = document.getElementById("botao2");
@@ -31,6 +32,9 @@ imgJS.classList.remove(".animacao-sobe-desce");
 
 //----------------------------------------------------------
 function PK1(){
+    NomeDoPokemonJS.innerHTML = "Bulbasaur"
+    NomeDoPokemonJS.style = "text-shadow:-1px -1px 0 black,1px -1px 0 black,-1px  1px 0 black,1px  1px 0 black;";
+    NomeDoPokemonJS.style.color = "green"
     const ClickPoke = new Audio("Audios/Click Pokemon.wav")
     ClickPoke.play()
     const CryBulbasaur = ["Audios/bulbasaur cry 1.wav","Audios/bulbasaur cry 2.wav"]
@@ -43,6 +47,9 @@ function PK1(){
     
 }
 function PK2(){
+    NomeDoPokemonJS.innerHTML = "Squirtle"
+    NomeDoPokemonJS.style = "text-shadow:-1px -1px 0 black,1px -1px 0 black,-1px  1px 0 black,1px  1px 0 black;";
+    NomeDoPokemonJS.style.color = "RGB(173, 216, 230)"
     const ClickPoke = new Audio("Audios/Click Pokemon.wav")
     ClickPoke.play()
     const CrySquirtle = ["Audios/squirtle cry 1.wav","Audios/squirtle cry 2.wav"]
@@ -54,6 +61,9 @@ function PK2(){
     document.getElementById('base').style.visibility = 'visible'
 }
 function PK3(){
+    NomeDoPokemonJS.innerHTML = "Charmander"
+    NomeDoPokemonJS.style = "text-shadow:-1px -1px 0 black,1px -1px 0 black,-1px  1px 0 black,1px  1px 0 black;";
+    NomeDoPokemonJS.style.color = "red"
     const ClickPoke = new Audio("Audios/Click Pokemon.wav")
     ClickPoke.play()
     const CryCharmander = ["Audios/charmander cry 1.wav","Audios/charmander cry 2.wav"]
