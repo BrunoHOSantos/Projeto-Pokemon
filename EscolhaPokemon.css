@@ -11,7 +11,7 @@ h1{
   top: 8%;   /* coloca no meio da altura */
   left: 50%;  /* coloca no meio da largura */
   transform: translate(-50%, -50%); /* ajusta para o centro exato */
-  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  max-width: 100%;  /* garante que a imagem não estoure a tela */ 
   height: auto;
   }
 #Logo{
@@ -20,10 +20,10 @@ h1{
 }
 .cenarioTodo{
   position: absolute;
-  top: 50%;   /* coloca no meio da altura */
-  left: 50%;  /* coloca no meio da largura */
-  transform: translate(-50%, -50%); /* ajusta para o centro exato */
-  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  top: 50%;   
+  left: 50%;  
+  transform: translate(-50%, -50%); 
+  max-width: 100%;  
   height: auto;
 }
 
@@ -39,7 +39,7 @@ h1{
 
 @keyframes sobe-desce {
   0% {
-    transform: translateY(1);   /* posição inicial */
+    transform: translateY(1);   
   }
   25%{
     transform: translateY(-30px);
@@ -48,20 +48,20 @@ h1{
     transform: translateY(0);
   }
   75%{
-    transform: translateY(-30px); /* sobe 50px */
+    transform: translateY(-30px); 
     
   }
   100% {
-    transform: translateY(1);   /* volta ao normal */
+    transform: translateY(1);   
   }
 }
 
 #resultado{
   position: absolute;
-  top: 42%;   /* coloca no meio da altura */
-  left: 50%;  /* coloca no meio da largura */
-  transform: translate(-50%, -50%); /* ajusta para o centro exato */
-  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  top: 42%;   
+  left: 50%;  
+  transform: translate(-50%, -50%); 
+  max-width: 100%;  
   height: auto;
 }
 
@@ -88,9 +88,9 @@ h1{
 
 .botoes{
   display: flex;
-  background-size: contain; /* ajusta a imagem */
-  justify-content: center;  /* centraliza os botões na horizontal */
-  gap: 150px;               /* espaço entre os botões */
+  background-size: contain; 
+  justify-content: center;  
+  gap: 150px;               
   margin-top: 25px;
 }
 
