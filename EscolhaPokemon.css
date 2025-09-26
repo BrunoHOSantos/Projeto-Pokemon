@@ -20,7 +20,7 @@ h1{
 }
 .cenarioTodo{
   position: absolute;
-  top: 50%;   
+  top: 55%;   
   left: 50%;  
   transform: translate(-50%, -50%); 
   max-width: 100%;  
@@ -56,6 +56,17 @@ h1{
   }
 }
 
+#NomeDoPokemon{
+  position: absolute;
+  font-family: 'Pixel';
+  font-size: 35pt;
+  top: 17%;   /* coloca no meio da altura */
+  left: 50%;  /* coloca no meio da largura */
+  transform: translate(-50%, -50%); /* ajusta para o centro exato */
+  max-width: 100%;  /* garante que a imagem não estoure a tela */
+  padding: 20%;
+  height: auto;
+}
 #resultado{
   position: absolute;
   top: 42%;   
@@ -65,16 +76,6 @@ h1{
   height: auto;
 }
 
-#NomeDoPokemon{
-  font-family: 'Pixel';
-  font-size: 30pt;
-  position: absolute;
-  top: 8%;   /* coloca no meio da altura */
-  left: 50%;  /* coloca no meio da largura */
-  transform: translate(-50%, -50%); /* ajusta para o centro exato */
-  max-width: 100%;  /* garante que a imagem não estoure a tela */
-  height: auto;
-}
 
 #base{
     position: absolute;
