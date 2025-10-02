@@ -121,9 +121,7 @@ h1{
   flex-grow: 1;
   margin-top: 90vh;
 }
-a.Info{
-  
-}
+
 #Quadrado1{
   padding: 10px;
   text-align: center;
@@ -153,6 +151,11 @@ a.Info{
   font-family:"Pixel";
   font-size: 30pt;
 }
+
+#Info,#Tipo,#Força{
+  font-size: 14pt;
+}
+
 hr {
   width: 100%;         /* ocupa toda a largura da caixa */
   border: none;        /* tira o estilo padrão */

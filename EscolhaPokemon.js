@@ -6,6 +6,8 @@ imgJS.setAttribute('id','foto')
 const botao2JS = document.getElementById("botao2");
 const botao3JS = document.getElementById("botao3");
 const botao1JS = document.getElementById("botao1");
+const InfoJS = document.getElementById("Info");
+
 
 function TocarThema() {
     const TocarThemaJS = new Audio("Audios/Pokemon Theme GameBoy.wav")
@@ -13,6 +15,7 @@ function TocarThema() {
     console.log("E para funcionar")
   }
 //----------------------------------------------------------
+
 botao1JS.addEventListener("click", () => {
   imgJS.classList.remove(".animacao-sobe-desce");
   void imgJS.offsetWidth;
@@ -29,7 +32,6 @@ void imgJS.offsetWidth;
 imgJS.classList.remove(".animacao-sobe-desce");
 });
 
-
 //----------------------------------------------------------
 function PK1(){
     NomeDoPokemonJS.innerHTML = "Bulbasaur"
@@ -44,6 +46,7 @@ function PK1(){
     resultadoJS.appendChild(imgJS).style = 'height: 120px;'
     imgJS.setAttribute('src',"IMGS/1.png")
     document.getElementById('base').style.visibility = 'visible'
+    InfoJS.innerHTML = ("Bulbasaur é um Pokémon inicial do tipo Planta/Veneno, notável por uma planta em suas costas que cresce com ele. Ele usa os nutrientes da semente para crescer e pode armazenar energia em seu bulbo, ficando dias sem comer, especialmente se cochilar ao sol para acelerar o crescimento. Ele evolui para Ivysaur no nível 16 e, depois, para Venusaur no nível 32. ")
     
 }
 function PK2(){
