@@ -148,3 +148,14 @@ a.Info{
   background-color: rgba(240, 255, 241, 0.726);
   border-radius: 30px;
 }
+.Info,.Tipo,.Forca{
+  margin: 2px;
+  font-family:"Pixel";
+  font-size: 30pt;
+}
+hr {
+  width: 100%;         /* ocupa toda a largura da caixa */
+  border: none;        /* tira o estilo padrão */
+  border-top: 1px solid rgb(34, 196, 42); /* cria uma linha fina cinza */
+  margin: 5px 0;       /* espaço em cima e embaixo */
+}
