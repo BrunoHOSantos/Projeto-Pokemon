@@ -1,2 +1,2 @@
 # ProjetoPokemon
-Um pepqueno projeto para estudo!!
+Um pequeno projeto para estudo!!
