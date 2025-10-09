@@ -6,7 +6,7 @@ imgJS.setAttribute('id','foto')
 const botao2JS = document.getElementById("botao2");
 const botao3JS = document.getElementById("botao3");
 const botao1JS = document.getElementById("botao1");
-
+// --------------------Tocar Tema Pokemon-------------------------------
 let Tocando = false
 function TocarThema() {  
     if(Tocando)return
@@ -21,108 +21,68 @@ function TocarThema() {
 }
 
 // ----------------------------Efeito digitando---------------------------
-let Digitando = false
+let Digitando = false;
+let intervaloAtual = null; // controla o setInterval ativo
+
+function escreverTexto(TextoInfo1, TextoInfo2, TextoInfo3) {
+    const InfoJS = document.getElementById("Info");
+    const TipoJS = document.getElementById("Tipo");
+    const ForcaJS = document.getElementById("Força");
+
+    InfoJS.textContent = "";
+    TipoJS.textContent = "";
+    ForcaJS.textContent = "";
+
+    let i = 0;
+    Digitando = true;
+
+    intervaloAtual = setInterval(() => {
+       
+        if (i < TextoInfo1.length) InfoJS.textContent += TextoInfo1[i];
+        if (i < TextoInfo2.length) TipoJS.textContent += TextoInfo2[i];
+        if (i < TextoInfo3.length) ForcaJS.textContent += TextoInfo3[i];
+        i++;
+
+        if (i >= Math.max(TextoInfo1.length, TextoInfo2.length, TextoInfo3.length)) {
+            clearInterval(intervaloAtual);
+            Digitando = false;
+        }
+    }, 10);
+}
+
+function trocarTexto(Texto1, Texto2, Texto3) {
+    if (intervaloAtual) clearInterval(intervaloAtual);
+    Digitando = false;
+    escreverTexto(Texto1, Texto2, Texto3);
+}
+
+// Botão 1
 botao1JS.addEventListener("click", () => {
-    if(Digitando)return
-    Digitando = true
-    const InfoJS = document.getElementById("Info");
-    const TipoJS = document.getElementById("Tipo");
-    const ForcaJS = document.getElementById("Força")
-    let TextoInfo1 = "Notável por uma planta em suas costas que cresce com ele. Ele usa os nutrientes da semente para crescer e pode armazenar energia em seu bulbo, ficando dias sem comer, especialmente se cochilar ao sol para acelerar o crescimento. Ele evolui para Ivysaur no nível 16 e, depois, para Venusaur no nível 32. "
-    let TextoInfo2 = "Bulbasaur é um Pokémon inicial do tipo Planta/Veneno                                                                                                                                                                                                                                                           "
-    let TextoInfo3 = "Resistências: É resistente a Pokémon dos tipos Água, Terra, Planta, Inseto, Lutador e Fada. Eficiência: É um ótimo counter para Pokémon de tipo Água, Terra e Pedra. ATAQUES: É forte em ataques de tipo Planta, como o poderoso Raio Solar.                                                                   "
-    InfoJS.textContent = ""; // limpa antes
-    TipoJS.textContent = "";
-    ForcaJS.textContent = "";
-    let i = 0
-        const intervalo = setInterval(() => {
-        InfoJS.textContent += TextoInfo1[i];
-        TipoJS.textContent += TextoInfo2[i];
-        ForcaJS.textContent += TextoInfo3[i];
-        i++;
-        if (i >= TextoInfo1.length) {
-            clearInterval(intervalo);
-            Digitando = false
-        }
-        if(i >= TextoInfo2.length){
-            clearInterval(intervalo)
-            Digitando = false
-        }
-        if(i >= TextoInfo3.length){
-            clearInterval(intervalo)
-            Digitando = false
-        }
-             
-      }, 10,); // velocidade em ms (100 = 0.1s por letra)
-    });
+    trocarTexto(
+        "Notável por uma planta em suas costas que cresce com ele. Ele usa os nutrientes da semente para crescer e pode armazenar energia em seu bulbo, ficando dias sem comer, especialmente se cochilar ao sol para acelerar o crescimento. Ele evolui para Ivysaur no nível 16 e, depois, para Venusaur no nível 32. ",
+        "Bulbasaur é um Pokémon inicial do tipo Planta/Veneno ",
+        "Resistências: É resistente a Pokémon dos tipos Água, Terra, Planta, Inseto, Lutador e Fada. Eficiência: É um ótimo counter para Pokémon de tipo Água, Terra e Pedra. ATAQUES: É forte em ataques de tipo Planta, como o poderoso Raio Solar."
+    );
+});
 
-    botao2JS.addEventListener("click", () => {
-    if(Digitando)return
-    Digitando = true
-    const InfoJS = document.getElementById("Info");
-    const TipoJS = document.getElementById("Tipo");
-    const ForcaJS = document.getElementById("Força")
-    let TextoInfo1 = "Com aparência de tartaruga azul, que tem uma carapaça em suas costas. Ele pode evoluir para Wartortle e, em seguida, para Blastoise. Conhecido por ser um dos três Pokémon iniciais da região de Kanto, Squirtle é um Pokémon marcante e popular na franquia, capaz de lançar jatos de água da boca e ter uma habilidade especial de nadar em alta velocidade devido ao seu casco. "
-    let TextoInfo2 = "É um Pokémon inicial do tipo Água da Primeira Geração                                                                                                                                                                                                                                                                                                                              "
-    let TextoInfo3 = "Tipo: Água. Aparência: Pokémon pequeno, azul-claro, com uma tartaruga e uma carapaça resistente nas costas.Evolução: De Squirtle para Wartortle (nível 16) e depois para Blastoise (nível 36).Habilidades: É capaz de disparar água e possui uma carapaça aerodinâmica que o ajuda a nadar rapidamente.                                                                            " 
-    InfoJS.textContent = ""; // limpa antes
-    TipoJS.textContent = "";
-    ForcaJS.textContent = "";
-    let i = 0
-        const intervalo = setInterval(() => {
-        InfoJS.textContent += TextoInfo1[i];
-        TipoJS.textContent += TextoInfo2[i];
-        ForcaJS.textContent += TextoInfo3[i];
-        i++;
-        if (i >= TextoInfo1.length) {
-            clearInterval(intervalo);
-            Digitando = false
-        }
-        if(i >= TextoInfo2.length){
-            clearInterval(intervalo)
-            Digitando = false
-        }
-        if(i >= TextoInfo3.length){
-            clearInterval(intervalo)
-            Digitando = false
-        }
-             
-      }, 10,); // velocidade em ms (100 = 0.1s por letra)
-    });
+// Botão 2
+botao2JS.addEventListener("click", () => {
+    trocarTexto(
+        "Com aparência de tartaruga azul, que tem uma carapaça em suas costas. Ele pode evoluir para Wartortle e, em seguida, para Blastoise. Conhecido por ser um dos três Pokémon iniciais da região de Kanto, Squirtle é um Pokémon marcante e popular na franquia, capaz de lançar jatos de água da boca e ter uma habilidade especial de nadar em alta velocidade devido ao seu casco. ",
+        "É um Pokémon inicial do tipo Água da Primeira Geração ",
+        "Tipo: Água. Aparência: Pokémon pequeno, azul-claro, com uma tartaruga e uma carapaça resistente nas costas. Evolução: De Squirtle para Wartortle (nível 16) e depois para Blastoise (nível 36). Habilidades: É capaz de disparar água e possui uma carapaça aerodinâmica que o ajuda a nadar rapidamente."
+    );
+});
 
-    botao3JS.addEventListener("click", () => {
-    if(Digitando)return
-    Digitando = true
-    const InfoJS = document.getElementById("Info");
-    const TipoJS = document.getElementById("Tipo");
-    const ForcaJS = document.getElementById("Força")
-    let TextoInfo1 = "É um dos Pokémon iniciais de Kanto, sendo fraco contra tipos Água, Terra e Pedra, mas resistente a Gelo, Fogo, Planta, Inseto e Metal. Sua habilidade principal, Blaze, aumenta a força de seus ataques de Fogo quando está com pouca vida.                                                                                         "
-    let TextoInfo2 = "É um Pokémon lagarto do tipo Fogo, conhecido por uma chama na ponta de sua cauda que reflete sua vitalidade e emoções                                                                                                                                                                                                               "
-    let TextoInfo3 = "Tipo: Fogo Aparência: Um pequeno lagarto bípede de cor laranja, com o ventre de cor amarela e uma chama que queima na ponta de sua cauda. A Chama: A chama na cauda é um indicador de sua força vital; se ela apagar, o Pokémon morre. Ela também oscila quando ele está feliz e arde com mais intensidade quando está com raiva.   " 
-    InfoJS.textContent = ""; // limpa antes
-    TipoJS.textContent = "";
-    ForcaJS.textContent = "";
-    let i = 0
-        const intervalo = setInterval(() => {
-        InfoJS.textContent += TextoInfo1[i];
-        TipoJS.textContent += TextoInfo2[i];
-        ForcaJS.textContent += TextoInfo3[i];
-        i++;
-        if (i >= TextoInfo1.length) {
-            clearInterval(intervalo);
-            Digitando = false
-        }
-        if(i >= TextoInfo2.length){
-            clearInterval(intervalo)
-            Digitando = false
-        }
-        if(i >= TextoInfo3.length){
-            clearInterval(intervalo)
-            Digitando = false
-        }
-             
-      }, 10,); // velocidade em ms (100 = 0.1s por letra)
-    });
+// Botão 3
+botao3JS.addEventListener("click", () => {
+    trocarTexto(
+        "É um dos Pokémon iniciais de Kanto, sendo fraco contra tipos Água, Terra e Pedra, mas resistente a Gelo, Fogo, Planta, Inseto e Metal. Sua habilidade principal, Blaze, aumenta a força de seus ataques de Fogo quando está com pouca vida.",
+        "É um Pokémon lagarto do tipo Fogo, conhecido por uma chama na ponta de sua cauda que reflete sua vitalidade e emoções.",
+        "Tipo: Fogo Aparência: Um pequeno lagarto bípede de cor laranja, com o ventre de cor amarela e uma chama que queima na ponta de sua cauda. A chama na cauda é um indicador de sua força vital; se ela apagar, o Pokémon morre. Ela também oscila quando ele está feliz e arde com mais intensidade quando está com raiva."
+    );
+});
+
 //---------------------------Animacao dos pokemons pulando---------------------------
 
 botao1JS.addEventListener("click", () => {
