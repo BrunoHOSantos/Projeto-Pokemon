@@ -50,6 +50,7 @@ h1{
 }
 
 @media(max-width: 768px){
+  @media (orientation: landscape){
   .cenarioTodo{
   position: absolute;
   top: 60%;   
@@ -57,7 +58,8 @@ h1{
   transform: translate(-50%, -50%); 
   max-width: 100%;  
   height: auto;
-}
+    }
+  }
 }
 
 #cenario{
