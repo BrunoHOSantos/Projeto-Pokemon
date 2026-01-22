@@ -38,6 +38,17 @@ h1{
 }
 }
 
+@media(max-width: 768px){
+  .cenarioTodo{
+  position: absolute;
+  top: 60%;   
+  left: 50%;  
+  transform: translate(-50%, -50%); 
+  max-width: 100%;  
+  height: auto;
+}
+}
+
 #cenario{
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.432);
   border-radius: 20px;
