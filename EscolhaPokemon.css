@@ -27,6 +27,17 @@ h1{
   height: auto;
 }
 
+@media(max-width: 1024px){
+  .cenarioTodo{
+  position: absolute;
+  top: 60%;   
+  left: 50%;  
+  transform: translate(-50%, -50%); 
+  max-width: 100%;  
+  height: auto;
+}
+}
+
 #cenario{
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.432);
   border-radius: 20px;
@@ -154,6 +165,12 @@ h1{
 
 #Info,#Tipo,#Força{
   font-size: 14pt;
+}
+
+@media(max-width: 768px){
+  #Info,#Tipo,#Força{
+  font-size: 12pt;
+}
 }
 
 hr {
